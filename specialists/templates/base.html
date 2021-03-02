@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&amp;subset=cyrillic-ext"
+          rel="stylesheet">
+    <link rel="shortcut icon" href="https://atom.io/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="http://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <title>{% block title %}Monitoring{% endblock %} </title>
+</head>
+<body>
+
+{% block navigation %}
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <a class="header__logo" href="{% url 'specialists:index' %}">Monitoring</a>
+                <nav class="nav">
+                    <a class="nav__link" href="{% url 'specialists:index' %}">Список</a>
+                    <a class="nav__link" href="{% url 'specialists:show_criteria' %}">Критерии</a>
+                    <a class="nav__link" href="{% url 'specialists:spec_new' %}">Новый специалист</a>
+                    <a class="nav__link" href="{% url 'admin:index' %}">Управление</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+{% block content %}{% endblock %}
+
+</body>
+</html>

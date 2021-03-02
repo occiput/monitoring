@@ -1,0 +1,14 @@
+Git - 0.3
+Tortoise SVN - 0.3
+Visual Studio - 0.5
+Eclipse - 0.4
+PyCharm - 0.5
+Spyder - 0.5
+Oracle SQL - 0.5
+Microsoft SQL Server - 0.5
+Python - 1.0
+C# - 0.7
+Java - 0.9
+PHP - 0.6
+JavaScript - 0.8
+C++ - 0.5

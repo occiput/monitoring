@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Список критериев {% endblock %}
+{% block content %}
+    <div class="estimate__container">
+        <div class="crit_list">
+            <h2 class="est__head">Список критериев</h2>
+            {% if all_criteria %}
+                {% for criteria in all_criteria %}
+                    <p class="field">{{ criteria.criteria_name }} : {{ criteria.criteria_value }}</p>
+                    <a href="{% url 'specialists:delete_criteria' criteria.criteria_name %}" class="del__icon"></a>
+                {% endfor %}
+            {% else %}
+                <h2 class="noCrits"> Критериев не найдено </h2>
+            {% endif %}
+
+            <a href="{% url 'specialists:new_criteria' %}" class="new_criteria_btn">Новый критерий</a>
+            <a href="{% url 'specialists:set_default' %}" class="change__btn">Установить критерии по умолчанию</a>
+        </div>
+    </div>
+
+{% endblock %}
