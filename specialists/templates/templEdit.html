@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="intro">
+    <div class="intro" style="justify-content: center">
         <div class="info__change">
             {% block name %} {% endblock %}
             <form method="POST" class="spec-form">{% csrf_token %}

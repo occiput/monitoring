@@ -3,17 +3,20 @@
 {% block title %}Список всех сотрудников{% endblock %}
 {% block content %}
 
-    <div class="intro">
+    <div class="intro" style="justify-content: center;">
         <div class="container">
             <div class="intro__inner">
-                <h2 class="list__head">Список специалистов</h2>
-                {% if all_spec %}
-                    {% for spec in all_spec %}
-                        <a class="spec" href="{% url 'specialists:estimate' spec.id %}">{{ spec }}</a>
-                    {% endfor %}
-                {% else %}
-                    <h2 class="noSpec"> Сотрудников не найдено </h2>
-                {% endif %}
+                <h2 class="change__top" style="color: oldlace;">Список специалистов</h2>
+                <div class="table__spec">
+                    {% if all_spec %}
+                        {% for spec in all_spec %}
+                            <a class="spec" href="{% url 'specialists:estimate' spec.id %}">{{ spec }}</a>
+                            <a href="{% url 'specialists:spec_delete' spec.id %}" class="x__icon"></a>
+                        {% endfor %}
+                    {% else %}
+                        <h2 class="noSpec" style="color: oldlace"> Сотрудников не найдено </h2>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
