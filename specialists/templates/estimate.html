@@ -20,7 +20,9 @@
                     <a href="{% url 'specialists:estim_delete' spec.id estim.0 %}" class="del__icon"></a>
                 {% endfor %}
             {% else %}
-                <h2 class="mover">Оценок нет</h2>
+                <div><h2 class="mover"> Оценок нет</h2>
+                <a href="{% url 'specialists:estim_edit' spec.id %}" class="change__btn">Добавить оценки</a>
+                </div>
             {% endif %}
         </div>
 

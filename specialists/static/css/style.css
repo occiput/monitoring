@@ -375,10 +375,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mover {
+    display: inline-block;
     position: relative;
-    margin: 230px 0;
-    top: -50px;
-    left: -30px;
+    margin: 230px 0 0 0;
+    color: oldlace;
 }
 
 .main__value {
