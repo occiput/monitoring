@@ -7,15 +7,23 @@
             <h2 class="change__top" style="color: oldlace">Список критериев</h2>
             {% if all_criteria %}
                 {% for criteria in all_criteria %}
-                    <p class="field">{{ criteria.criteria_name }} : {{ criteria.criteria_value }}</p>
-                    <a href="{% url 'specialists:delete_criteria' criteria.criteria_name %}" class="del__icon"></a>
+                    <div class="obj">
+                        <a href="{% url 'specialists:delete_criteria' criteria.criteria_name %}" class="cl-btn-2">
+                            <div>
+                                <div class="leftright"></div>
+                                <div class="rightleft"></div>
+                            </div>
+                        </a>
+                        <p class="field">{{ criteria.criteria_name }} : {{ criteria.criteria_value }}</p>
+                    </div>
                 {% endfor %}
             {% else %}
                 <h2 class="noCrits"> Критериев не найдено </h2>
             {% endif %}
-
-            <a href="{% url 'specialists:new_criteria' %}" class="new_criteria_btn">Новый критерий</a>
-            <a href="{% url 'specialists:set_default' %}" class="change__btn">Установить критерии по умолчанию</a>
+            <div class="buttons">
+                <a href="{% url 'specialists:new_criteria' %}" class="new_criteria_btn">Новый критерий</a>
+                <a href="{% url 'specialists:set_default' %}" class="change__btn">Установить критерии по умолчанию</a>
+            </div>
         </div>
     </div>
 

@@ -43,8 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     color: black;
     width: 100%;
     height: 80vh;
-    max-height:80vh;
-    max-width: 1200px;
+    max-height: 80vh;
     position: relative;
 }
 
@@ -71,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
     color: oldlace;
     text-decoration: none;
     display: inline-block;
-    padding: 15px 15px 5px 5px;
+    padding: 5px;
     margin: 3px auto 3px;
 
 
@@ -97,8 +96,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .x__icon:hover {
-    background-color: rgb(231,28,72);
-    border: 2px solid rgb(231,28,72);
+    background-color: rgb(231, 28, 72);
+    border: 2px solid rgb(231, 28, 72);
     opacity: 1;
 }
 
@@ -108,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 15px;
     left: 7px;
     width: 2px;
-    background-color: rgb(231,28,72);
+    background-color: rgb(231, 28, 72);
 }
 
 .x__icon:before {
@@ -118,9 +117,11 @@ h1, h2, h3, h4, h5, h6 {
 .x__icon:after {
     transform: rotate(-45deg);
 }
+
 .x__icon:hover:before, .x__icon:hover:after {
     background-color: oldlace;
 }
+
 .noSpec {
     font-size: 25px;
     font-weight: 700;
@@ -266,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
     outline: none;
     border: 1px solid rgba(0, 0, 0, .1);
     border-radius: 2px;
-    background: rgb(231,28,72);;
+    background: rgb(231, 28, 72);;
 
 }
 
@@ -290,8 +291,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 19%;
-    padding-right: 19%;
+    padding-left: 10%;
+    padding-right: 10%;
     width: 100%;
     height: 100vh;
 }
@@ -365,14 +366,6 @@ h1, h2, h3, h4, h5, h6 {
     width: max-content;
 }
 
-.field:after {
-    content: "";
-    display: block;
-
-    height: 3px;
-
-    background-color: oldlace;
-}
 
 .mover {
     display: inline-block;
@@ -414,8 +407,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Страницы изменения/добавления */
 
 .change__top {
+    margin-bottom: 20px;
     position: relative;
     width: max-content;
+    color: oldlace;
 }
 
 .change__top:after {
@@ -581,7 +576,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #f4f4f4;
     display: block;
     position: relative;
-    top: -25px;
+    top: -30px;
     left: -20px;
     opacity: 0.7;
 }
@@ -609,6 +604,71 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(-45deg);
 }
 
+.obj {
+    max-height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cl-btn-2 {
+    margin-top: 5px;
+    margin-right: 20px;
+    display: flex;
+
+}
+
+.cl-btn-2 div {
+    cursor: pointer;
+    position: relative;
+    height: 7px;
+    width: 2px;
+}
+
+.cl-btn-2 .leftright {
+    height: 3px;
+    width: 20px;
+    position: absolute;
+    background-color: #f34642;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    transition: all .3s ease-in;
+}
+
+.cl-btn-2 .rightleft {
+    height: 3px;
+    width: 20px;
+    position: absolute;
+    background-color: #f34642;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    transition: all .3s ease-in;
+}
+
+.cl-btn-2 .close-btn {
+    position: absolute;
+    color: #f34642;
+    transition: all .3s ease-in;
+    opacity: 0;
+}
+
+.cl-btn-2 div:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: #000;
+}
+
+.cl-btn-2 div:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: #000;
+}
+
+.cl-btn-2 div:hover .close-btn {
+    opacity: 1;
+}
+
+.buttons {
+    padding-top: 20px;
+}
 
 .new_criteria_btn {
     display: inline-block;
